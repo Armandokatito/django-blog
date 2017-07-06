@@ -1,0 +1,44 @@
+<ul>
+    <li><a href="/articles/all">Todos artigos</a></li>
+    {% if user.is_superuser %}
+    <li><a href="/admin/">Painel de contolo</a></li>
+    <li><a href="/articles/create/">Postar Artigo</a></li>
+    {% endif %}
+
+    {% if not user.username  %}
+    <div class="login">
+        <div class="login-header">
+            <p>Login now</p>
+            {% if form.erros %}
+                <p class="error">Oops, usuario ou senha icorreta!</p>
+            {% endif %}
+        </div><!-- login-header -->
+        <div class="login-body">
+
+            <form action="/accounts/login/" method="post">
+                {% csrf_token %}
+                <div><input type="text" name="username" placeholder="Username"></div>
+                <div><input type="password" name="password" placeholder="Username"></div>
+                <div><input type="submit" value="Login"> &nbsp;&nbsp;&nbsp;<a href="/accounts/register/">Ou regista-se</a></div>
+            </form>
+        </div><!-- login-body -->
+    </div>
+    {% endif %}
+    <div class="artigos">
+        <div class="artigo-header">
+            <p>Artigos mais Lidos</p>
+        </div><!-- login-header -->
+        <div class="artigo-body">
+           <ul>
+               <li><a href="">Lorem Putim Martin</a></li>
+               <li><a href="">Lorem Putim Martin</a></li>
+               <li><a href="">Lorem Putim Martin</a></li>
+               <li><a href="">Lorem Putim Martin</a></li>
+               <li><a href="">Lorem Putim Martin</a></li>
+               <li><a href="">Lorem Putim Martin</a></li>
+               <li><a href="">Lorem Putim Martin</a></li>
+           </ul><div class="clean"></div>
+        </div><!-- login-body -->
+
+    </div>
+</ul>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+</head>
+<body>
+{% include "default/menu.html" %}
+    <div class="container">
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div><!-- content -->
+        <div class="sidebar">
+            {% include "body/sidebar.html" %}
+        </div><!-- sidebar -->
+    </div>
+</body>
+</html>

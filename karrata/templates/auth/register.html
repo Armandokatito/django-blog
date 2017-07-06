@@ -1,0 +1,36 @@
+{% extends "default/base.html" %}
+
+
+{% block title %}register{% endblock %}
+
+{% block content %}
+    <div class="register">
+
+
+
+
+        <form action="/accounts/auth/" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <div><input type="submit" value="registrar"></div>
+        </form>
+          <!--  {% csrf_token %}
+            <div>
+                <input type="text" name="username" placeholder="Nome do Usuario...">
+            </div>
+            <div>
+                <input type="text" name="email" placeholder="Email...">
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Senha...">
+            </div>
+
+            <div>
+                <input type="password" name="re-password" placeholder="Repete senha...">
+            </div>
+            <div><input type="submit" value="Registrar"></div>
+        </form> -->
+
+    </div>
+
+{% endblock %}

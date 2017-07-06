@@ -1,0 +1,16 @@
+<div class="menu">
+    <div class="logo">
+        <img src="/static/images/logo.png" alt="logo" width="40" height="40"> <h6>Python Lab</h6>
+    </div>
+  <div class="clean"></div>
+    <div class="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            {% if user.username %}
+                <li><a href="/admin/">{{ user.username }}</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div><div class="clean"></div>

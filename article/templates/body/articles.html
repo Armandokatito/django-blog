@@ -1,0 +1,26 @@
+{% extends "default/base.html" %}
+{% block title %}articles{% endblock %}
+
+{% block content %}
+
+<!---################### content ###########################-->
+{% if articles.count > 0 %}
+ <p>cookie language is: {{ language }}</p>
+ <p>session language is: {{ sess_lang }}</p>
+ {% for list in articles %}
+    <div>
+        <h5><a href="/articles/get/{{ list.id }}">{{ list.title }}</a></h5>
+
+        <p>{{ list.body|lower|truncatewords:20 }}</p>
+        
+        {% if list.thumbnail %}
+        <img src="/media/{{ list.thumbnail }}" alt="imagem" width="200">
+        {% endif %}
+        <p>{{ list.likes }} people like this article</p>
+    </div>
+ {% endfor %}
+{% else %}
+    <p>None to show</p>
+{% endif %}
+<!---################### content ###########################-->
+{% endblock %}
