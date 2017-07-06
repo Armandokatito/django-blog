@@ -90,8 +90,12 @@ def search_tile(request):
 
         search_text = request.POST['search_text']
 
-        return HttpResponse(search_text)
-    pass
+    else:
+        search_text = ''
+    a = Article.objects.filter(title__contains=search_text)
+
+    return render(request, 'body/ajax_search.html', {'article': a})
+
 def language(request, lang='en-US'):
 
     """
