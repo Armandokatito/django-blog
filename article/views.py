@@ -84,7 +84,7 @@ def like_article(request, article_id):
 def add_comment(request, article_id):
     pass
 
-def search(request):
+def search_tile(request):
     pass
 def language(request, lang='en-US'):
 

@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^language/(?P<lang>[a-zA-Z\-]+)/$', language, name='language' ),
     url(r'^like/(?P<article_id>\d+)/$', like_article, name="likes"),
     url(r'^add_comment/(?P<article_id>\d+)/$', add_comment, name='comment'),
-    url(r'^search/$', search, name='search'),
+    url(r'^search/$', search_tile, name='search'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
