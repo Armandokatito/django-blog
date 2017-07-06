@@ -3,6 +3,7 @@
         <img src="/static/images/logo.png" alt="logo" width="40" height="40"> <h6>Python Lab</h6>
     </div>
   <div class="clean"></div>
+
     <div class="nav">
         <ul>
             <li><a href="/">Home</a></li>
@@ -13,4 +14,11 @@
             {% endif %}
         </ul>
     </div>
+    <div class="nav search">
+        <form action="/articles/search/" method="post">
+            {% csrf_token %}
+            <input type="text" name="search_text">
+            <input type="submit" value="Search">
+        </form>
+    </div><div class="clean"></div>
 </div><div class="clean"></div>

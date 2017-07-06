@@ -85,6 +85,12 @@ def add_comment(request, article_id):
     pass
 
 def search_tile(request):
+
+    if request.method == 'POST':
+
+        search_text = request.POST['search_text']
+
+        return HttpResponse(search_text)
     pass
 def language(request, lang='en-US'):
 

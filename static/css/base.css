@@ -26,6 +26,18 @@ body {
     float: right;
     margin-top: -29px;
     margin-right: 70px;
+    margin-bottom: -33px;
+}
+.menu .search {
+    margin-right: 230px;
+    margin-right: 340px;
+}
+.menu .search input[type='text']{
+    color: red;
+    width: 400px;
+}
+.menu .search input[type='submit']{
+    background: #fff;
 }
 .menu .nav ul {
     list-style: none;
@@ -46,8 +58,10 @@ body {
     float: left;
     padding: 5px;
     box-shadow: 2px 2px 1px #ccc;
+    margin-top: 12px;
 }
 .container .sidebar {
+    margin-top: 12px;
     width: 300px;
     background-color: #fff;
     float: left;
