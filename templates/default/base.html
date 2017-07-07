@@ -1,12 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="/static/css/normalize.css">
-    <link rel="stylesheet" href="/static/css/skeleton.css">
-    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href={% static "css/normalize.css" %}>
+    <link rel="stylesheet" href={% static "css/skeleton.css" %}>
+    <link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
+    <link rel="stylesheet" href={% static "css/base.css" %}>
 </head>
 <body>
 {% include "default/menu.html" %}
@@ -19,5 +20,8 @@
             {% include "body/sidebar.html" %}
         </div><!-- sidebar -->
     </div>
+
+    <script src={% static "js/jquery.js" %}></script>
+    <script src={% static "js/default.js" %}></script>
 </body>
 </html>
