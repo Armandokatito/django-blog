@@ -60,6 +60,7 @@ TEMPLATES = [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR,'article/templates'),
             os.path.join(BASE_DIR, 'karrata/tempplates'),
+            os.path.join(BASE_DIR, 'userprofile/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
