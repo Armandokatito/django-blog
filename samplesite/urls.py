@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^$', home ),
     url(r'^articles/', include('article.urls')),
     url(r'^accounts/', include('karrata.urls')),
+    url(r'^users/', include('userprofile.urls')),
     url(r'^admin/', admin.site.urls),
 
 ]
