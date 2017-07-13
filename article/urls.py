@@ -3,6 +3,7 @@ from article.views import *
 from django.conf.urls.static import static
 from django.conf import settings
 
+# Ola estas sao minhas mudacans
 urlpatterns = [
 
     url(r'^all/$', articles, name='all'),
